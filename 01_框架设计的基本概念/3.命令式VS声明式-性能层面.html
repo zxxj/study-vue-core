@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+	<div id="app"></div>
+
+	<div id="container">{{ message }}</div>
+
+</body>
+
+<script>
+
+	// 命令式vs声明式: 性能方面比较
+
+	// 例子: 为指定div的内容设置为hello world
+
+	// 命令式实现
+	const appEl = document.querySelector('#app')
+	appEl.innerHTML = 'hello world'
+
+	// 声明式实现
+	const message = ref('hello world')
+
+	/*
+		总结:
+
+		命令式代码
+		const appEl = document.querySelector('#app')
+		appEl.innerHTML = 'hello world'
+		
+		应该找不到比这个更简单的代码实现了, 那么此时我们把这个操作的耗时比作1
+
+		声明式代码
+		<div id="container">{{ message }}</div>
+		const message = ref('hello world')
+
+		那么已知修改div中的内容最简单的方式是innerText,所以说无论声明式的代码是如何实现的内容渲染,它的耗时一定是大于1的, 可以把它比作 1 + n
+
+		所以由上代码举例可以得知,命令式的性能大于声明式的性能
+	*/
+
+</script>
+</html>

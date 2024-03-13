@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+	<div id="app"></div>
+
+	<div id="container">
+		<div>
+			<p></p>
+		</div>
+	</div>
+</body>
+
+<script>
+
+	/* 
+	 1.创建一个div,内容为hello
+	 该代码虽然只有两步,但它清楚的描述了完成这件事情所需要经历的过程
+	*/
+	const appEl = document.querySelector("#app")
+	appEl.innerHTML = 'hello'
+
+	// 2.那么假如我们所做的事情变得更加复杂了,则整个过程的代码实现也会变得更加复杂, 比如为container的子元素div的子元素p元素的内容展示变量message
+
+	// 定义变量message
+	const message = 'hello world'
+
+	// 获取到第一层的div(#container)
+	const containerEl = document.querySelector("#contaienr")
+
+	// 获取到它的子元素(div)
+	const subDivEl = document.querySelector('div')
+
+	// 获取到第三层的p元素
+	const pEl = document.querySelector('p')
+
+	// 为p元素设置内容
+	pEl.innerHTML = message
+
+	// 总结: 命令式是关注过程的一种编程范式,他描述了完成一个功能的详细逻辑与步骤
+
+</script>
+</html>

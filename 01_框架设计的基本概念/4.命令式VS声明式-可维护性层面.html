@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+	<div id="app">
+		<div>
+			<p></p>
+		</div>
+	</div>
+
+	<div id="container">
+		<div>
+			<p>{{ message }}</p>
+		</div>
+	</div>
+
+</body>
+
+<script>
+
+	// 命令式vs声明式: 可维护性方面比较
+
+	// 例子: 为指定p元素的内容设置为hello world
+
+	// 命令式实现
+	const appEl = document.querySelector('#app')
+	const subEl = appEl.querySelector('div')
+	const pEl = subEl.querySelector('p')
+	pEl.innerHTML = 'hello world'
+
+	// 声明式实现
+	const message = ref('hello world')
+
+	/*
+		总结:
+		1.可维护性代表的维度非常广,但是通常情况下所谓的可维护性指的是对代码可以方便的进行阅读,修改,删除,增加等操作,那么想达到这个目的说白了就是让代码的逻辑要足够的简单,让人一看就能懂
+		2.明确了可维护性的概念,下面就来看一下命令式与声明式在同一个业务下代码的实现逻辑
+
+		命令式代码
+			<div id="app">
+				<div>
+					<p></p>
+				</div>
+			</div>
+			
+			const appEl = document.querySelector('#app')
+			const subEl = appEl.querySelector('div')
+			const pEl = subEl.querySelector('p')
+			pEl.innerHTML = 'hello world'
+		
+		声明式代码
+			<div id="container">
+				<div>
+					<p>{{ message }}</p>
+				</div>
+			</div>
+
+			const message = ref('hello world')
+
+		3.对于以上代码而言,声明式的代码明显更加利于阅读,所以也更加利于维护,所以声明式的可维护性大于命令式的可维护性
+	*/
+
+</script>
+</html>

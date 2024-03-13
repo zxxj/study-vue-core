@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+
+	 <!-- 为container的子元素div的子元素p元素的内容展示变量message -->
+	 <template>
+		 <div id="container">
+			 <div>
+				 <p>{{ message }}</p>
+				</div>
+			</div>	
+	 </template>
+
+	 <!-- 在声明式的代码中,完全不关心message是怎样被渲染到p元素中的,关心的是在p元素中,渲染指定文本而已 -->
+
+	 <!-- 
+		总结: 声明式是关注结果的一个编程范式,它并不关心完成一个功能的详细逻辑与步骤(注意这并不意味着声明式不需要过程,声明式只是将实现过程进行了隐藏而已)
+	  -->
+</body>
+</html>
