@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+	<div id="app"></div>
+
+	<div id="container">{{ message }}</div>
+
+</body>
+
+<script>
+
+	// 命令式编程
+	const appEl = document.querySelector('#app')
+	appEl.innerHTML = 'hello xin'
+	// 性能损耗 1
+
+	// 声明式编程
+	const message = 'hello xinxin'
+	// 性能损耗 1 + n
+
+</script>
+
+</html>

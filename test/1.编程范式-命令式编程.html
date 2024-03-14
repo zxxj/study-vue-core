@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+	<div id="app"></div>
+
+	<div id="container">
+		<div>
+			<p></p>
+		</div>
+	</div>
+
+</body>
+
+
+<script>
+
+	const appEl = document.querySelector('#app')
+	appEl.innerHTML = 'hello world'
+
+	const containerEl = document.querySelector("#container")
+	const subEl = containerEl.querySelector('div')
+	const pEl = subEl.querySelector('p')
+	pEl.innerHTML = 'hello P'
+
+</script>
+</html>
